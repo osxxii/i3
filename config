@@ -191,7 +191,7 @@ bar {
 }
 
 # WALLPAPER @CUSTOM
-exec_always feh --bg-fill /home/mwi/Dropbox/marc-all/arbeit/asseco/wallpaper/m7f-dtp-dn-jc-z4dt3myngzxi.jpg
+exec_always feh --bg-fill /home/mwi/Dropbox/marc-all/arbeit/asseco/wallpaper/saturn-rings.jpg
 
 # SCREENSHOT @CUSTOM
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
