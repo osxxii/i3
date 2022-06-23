@@ -207,3 +207,4 @@ bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(d
 ## I3LOCK @CUSTOM
 bindsym Ctrl+$mod+l exec i3lock
 
+## TEST
