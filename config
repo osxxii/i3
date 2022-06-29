@@ -194,15 +194,25 @@ bar {
 }
 
 # WALLPAPER @CUSTOM
-exec_always feh --bg-fill /home/mwi/Dropbox/marc-all/arbeit/asseco/wallpaper/saturn-rings.jpg
+exec_always feh --bg-fill /home/mwi/git/marc-all/arbeit/asseco/wallpaper/saturn-rings.jpg
 
 # SCREENSHOT @CUSTOM
 
-# All monitors
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+## # All monitors
+## bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+##
+## # Selection
+## bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
 
-# Selection
+# Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
 bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 ## I3LOCK @CUSTOM
 bindsym Ctrl+$mod+l exec i3lock
